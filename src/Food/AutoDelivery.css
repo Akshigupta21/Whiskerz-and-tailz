@@ -1,0 +1,187 @@
+/* Shared */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Section */
+.auto-delivery-section {
+  padding: 3rem 1rem;
+  background: white;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .auto-delivery-section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .auto-delivery-section {
+    padding: 3rem 4rem;
+  }
+}
+
+/* Heading */
+.auto-delivery-heading {
+  color: #1f2937;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Content Layout */
+.auto-delivery-content {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .auto-delivery-content {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+
+.auto-delivery-offers,
+.auto-delivery-frequency {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .auto-delivery-offers {
+    width: 50%;
+  }
+
+  .auto-delivery-frequency {
+    width: 50%;
+  }
+}
+
+/* Offers Section */
+.auto-delivery-subheading {
+  color: #1f2937;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.auto-delivery-description {
+  margin-top: 1rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.auto-delivery-list {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.auto-delivery-list-item {
+  display: flex;
+  align-items: center;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.auto-delivery-icon {
+  color: #f97316;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+}
+
+.auto-delivery-button {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background: #f97316;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.auto-delivery-button:hover {
+  background: #ea580c;
+  box-shadow: 0 4px 6px #f9731610;
+}
+
+/* Frequency Section */
+.auto-delivery-frequency {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.auto-delivery-options {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.auto-delivery-option {
+  display: flex;
+  align-items: center;
+  color: #374151;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.auto-delivery-option input[type="radio"] {
+  appearance: none;
+  background: white;
+  border: 2px solid #d1d5db;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin: 0;
+  transition: border-color 0.15s;
+}
+
+.auto-delivery-option input[type="radio"]:checked {
+  border-color: #f97316;
+  background: radial-gradient(
+    circle,
+    #f97316 0%,
+    #f97316 40%,
+    transparent 50%,
+    transparent 100%
+  );
+  background-size: 90% 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.auto-delivery-option input[type="radio"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #f9731640;
+}
+
+.auto-delivery-option-label {
+  margin-left: 0.5rem;
+  transition: color 0.15s;
+}
+
+.auto-delivery-option:hover .auto-delivery-option-label {
+  color: #1f2937;
+}

@@ -1,0 +1,173 @@
+/* HomePage.css */
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* Ensure smooth scrolling between sections */
+.home-page section {
+  scroll-margin-top: 80px; /* Account for fixed header */
+  margin-bottom: 2rem;
+}
+
+/* Hero section container adjustments */
+.home-page .hero-section {
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Card styles for consistent design */
+.home-page .product-card,
+.home-page .shop-card,
+.home-page .blog-post-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 280px;
+  margin-right: 20px;
+}
+
+.home-page .product-card:hover,
+.home-page .shop-card:hover,
+.home-page .blog-post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.home-page .product-card img,
+.home-page .shop-card img,
+.home-page .blog-post-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.home-page .product-card-content,
+.home-page .shop-content,
+.home-page .card-content {
+  padding: 1rem;
+}
+
+.home-page .product-card h3,
+.home-page .shop-card h3,
+.home-page .blog-post-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.home-page .product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff6b35;
+  margin-bottom: 1rem;
+}
+
+.home-page .add-to-cart-btn,
+.home-page .btn-primary {
+  background: #ff6b35;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.home-page .add-to-cart-btn:hover,
+.home-page .btn-primary:hover {
+  background: #e55a2b;
+}
+
+/* Pet type cards */
+.home-page .pet-type-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  flex: 0 0 120px;
+  margin-right: 15px;
+  text-align: center;
+}
+
+.home-page .pet-type-card:hover {
+  transform: translateY(-3px);
+}
+
+.home-page .pet-type-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.home-page .pet-type-card h3 {
+  font-size: 0.9rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Read more links */
+.home-page .read-more-link {
+  color: #ff6b35;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.home-page .read-more-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-page {
+    padding: 0;
+  }
+  
+  .home-page .product-card,
+  .home-page .shop-card,
+  .home-page .blog-post-card {
+    flex: 0 0 240px;
+  }
+  
+  .home-page .pet-type-card {
+    flex: 0 0 100px;
+  }
+}
+
+/* Smooth transitions */
+.home-page * {
+  transition: all 0.3s ease;
+}
+
+/* Loading state */
+.home-page.loading {
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* Animation for page load */
+.home-page {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

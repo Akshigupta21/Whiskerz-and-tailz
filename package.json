@@ -1,0 +1,51 @@
+{
+  "name": "wiskerz-and-tail",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.6.0",
+    "firebase": "^10.7.0",
+    "lucide-react": "^0.525.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.7.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "scripts": {
+    "start": "node \"./node_modules/react-scripts/scripts/start.js\"",
+    "build": "node \"./node_modules/react-scripts/scripts/build.js\"",
+    "test": "node \"./node_modules/react-scripts/scripts/test.js\"",
+    "eject": "node \"./node_modules/react-scripts/scripts/eject.js\"",
+    "backend": "cd Backend && npm run dev",
+    "dev": "concurrently \"npm run backend\" \"npm start\"",
+    "install-all": "npm install && cd Backend && npm install",
+    "build-all": "npm run build && cd Backend && npm run build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:3001"
+}

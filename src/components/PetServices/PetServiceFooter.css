@@ -1,0 +1,209 @@
+/* Pet Service Footer Styles */
+.pet-service-footer {
+  background: #2c3e50;
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.footer-brand {
+  max-width: 400px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.brand-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.brand-icon {
+  font-size: 1.5rem;
+}
+
+.brand-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #bdc3c7;
+  margin-bottom: 30px;
+}
+
+.download-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ff6b6b;
+  margin-bottom: 15px;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.download-btn {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+}
+
+.download-btn img {
+  height: 45px;
+  width: auto;
+  border-radius: 8px;
+}
+
+.footer-contact {
+  padding-left: 20px;
+}
+
+.footer-section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-icon {
+  font-size: 1.2rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.contact-text {
+  font-size: 0.95rem;
+  color: #bdc3c7;
+  line-height: 1.5;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: #ff6b6b;
+  transform: translateY(-2px);
+}
+
+.footer-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link-list li {
+  margin-bottom: 12px;
+}
+
+.footer-link {
+  color: #bdc3c7;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #ff6b6b;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 25px;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #95a5a6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .footer-contact {
+    padding-left: 0;
+  }
+  
+  .download-buttons {
+    flex-direction: column;
+    gap: 10px;
+    max-width: 200px;
+  }
+  
+  .social-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .pet-service-footer {
+    padding: 40px 0 20px;
+  }
+  
+  .brand-name {
+    font-size: 1.5rem;
+  }
+  
+  .footer-section-title {
+    font-size: 1.1rem;
+  }
+  
+  .contact-item {
+    gap: 10px;
+  }
+  
+  .social-link {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}

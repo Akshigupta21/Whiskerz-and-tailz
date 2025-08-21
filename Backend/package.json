@@ -1,0 +1,86 @@
+{
+  "name": "wiskerz-and-tail-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Wiskerz & Tail pet store application with comprehensive validation and security",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "dev:debug": "nodemon --inspect app.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix",
+    "format": "prettier --write .",
+    "seed": "node scripts/seed.js",
+    "seed:foods": "node scripts/seedFoods.js",
+    "seed:all": "node scripts/seedAll.js",
+    "seed:indian": "node scripts/seedIndianData.js",
+    "migrate": "node scripts/migrate.js",
+    "build": "echo 'No build step required for Node.js'",
+    "logs": "tail -f logs/app.log",
+    "logs:error": "tail -f logs/error.log",
+    "clean": "rm -rf node_modules package-lock.json && npm install",
+    "security-check": "npm audit",
+    "validate": "npm run lint && npm run test",
+    "precommit": "npm run validate"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.8.1",
+    "connect-mongo": "^5.1.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^8.0.1",
+    "express-session": "^1.18.2",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.1.0",
+    "hpp": "^0.2.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.7",
+    "razorpay": "^2.9.6",
+    "stripe": "^14.25.0",
+    "xss-clean": "^0.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.2",
+    "eslint-plugin-node": "^11.1.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.6.2",
+    "supertest": "^6.3.4"
+  },
+  "keywords": [
+    "pet",
+    "store",
+    "api",
+    "backend",
+    "nodejs",
+    "express",
+    "mongodb",
+    "rest-api",
+    "validation",
+    "security"
+  ],
+  "author": "Pet Lover Team",
+  "license": "ISC",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/pet-lover-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/pet-lover-backend/issues"
+  },
+  "homepage": "https://github.com/your-org/pet-lover-backend#readme"
+}

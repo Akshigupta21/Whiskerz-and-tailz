@@ -1,0 +1,177 @@
+/* Pet Training Advice Component Styles */
+.pet-training-advice {
+  padding: 3rem 1rem;
+  background-color: #f8f9fa;
+}
+
+.training-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.training-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.training-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.training-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.training-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.category-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.category-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.category-content {
+  padding: 1.5rem;
+}
+
+.category-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.category-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.category-tips {
+  list-style: none;
+  padding: 0;
+}
+
+.tip-item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #555;
+}
+
+.tip-item:last-child {
+  border-bottom: none;
+}
+
+.tip-item:before {
+  content: "✓";
+  color: #f97316;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.training-cta {
+  text-align: center;
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+}
+
+.cta-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.cta-description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  background-color: white;
+  color: #f97316;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #f3f4f6;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .training-title {
+    font-size: 2rem;
+  }
+  
+  .training-categories {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Dark Mode */
+.dark-mode .pet-training-advice {
+  background-color: #1a202c;
+}
+
+.dark-mode .training-title {
+  color: white;
+}
+
+.dark-mode .training-subtitle {
+  color: #a0aec0;
+}
+
+.dark-mode .category-card {
+  background-color: #2d3748;
+}
+
+.dark-mode .category-title {
+  color: white;
+}
+
+.dark-mode .category-description {
+  color: #a0aec0;
+}
+
+.dark-mode .tip-item {
+  color: #e2e8f0;
+  border-color: #4a5568;
+}

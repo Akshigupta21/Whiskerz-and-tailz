@@ -1,0 +1,83 @@
+import { getPlaceholderImage } from '../utils/helpers';
+
+// Centralized product data for the entire application
+export const allProducts = [
+    // Deal of the Day Products (3 products)
+    { id: 1, name: 'Premium Organic Dog Food', category: 'Food', type: 'Dogs', price: 49.99, oldPrice: 69.99, rating: 4.8, overview: 'High-quality organic dog food for overall health.', images: [getPlaceholderImage(200, 150, 'Dog Food', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Dog Food 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Dog Food 3', 'cccccc', '333333')] },
+    { id: 2, name: 'Interactive Cat Toy Bundle', category: 'Toys', type: 'Cats', price: 24.99, oldPrice: 39.99, rating: 4.7, overview: 'A bundle of engaging toys to keep your cat entertained.', images: [getPlaceholderImage(200, 150, 'Cat Toys', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Cat Toys 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Cat Toys 3', 'cccccc', '333333')] },
+    { id: 3, name: 'Premium Dog Treats Pack', category: 'Food', type: 'Dogs', price: 29.99, oldPrice: 44.99, rating: 4.9, overview: 'Delicious and healthy treats for your canine companion.', images: [getPlaceholderImage(200, 150, 'Dog Treats', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Dog Treats 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Dog Treats 3', 'cccccc', '333333')] },
+    { id: 4, name: 'Cat Scratching Post Deluxe', category: 'Toys & Accessories', type: 'Cats', price: 79.99, rating: 4.8, overview: 'A premium scratching post to keep your cat entertained.', images: [getPlaceholderImage(200, 150, 'Cat Scratching Post', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Cat Scratching Post 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Cat Scratching Post 3', 'cccccc', '333333')] },
+    { id: 5, name: 'Premium Dog Leash', category: 'Toys & Accessories', type: 'Dogs', price: 34.99, rating: 4.6, overview: 'Durable and comfortable leash for your daily walks.', images: [getPlaceholderImage(200, 150, 'Dog Leash', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Dog Leash 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Dog Leash 3', 'cccccc', '333333')] },
+    { id: 6, name: 'Bird Food Premium Mix', category: 'Food', type: 'Birds', price: 19.99, rating: 4.7, overview: 'Nutritious blend of seeds and grains for birds.', images: [getPlaceholderImage(200, 150, 'Bird Food', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Bird Food 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Bird Food 3', 'cccccc', '333333')] },
+    { id: 7, name: 'Dog Grooming Kit', category: 'Grooming', type: 'Dogs', price: 89.99, rating: 4.5, overview: 'Complete grooming set for professional results at home.', images: [getPlaceholderImage(200, 150, 'Grooming Kit', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Grooming Kit 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Grooming Kit 3', 'cccccc', '333333')] },
+
+
+    // Featured Products (7 products)
+    { id: 8, name: 'Cat Water Fountain', category: 'Health & Wellness', type: 'Cats', price: 59.99, rating: 4.4, overview: 'Automatic water fountain to keep your cat hydrated.', images: [getPlaceholderImage(200, 150, 'Water Fountain', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Water Fountain 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Water Fountain 3', 'cccccc', '333333')] },
+    { id: 9, name: 'Hamster Exercise Wheel', category: 'Toys & Accessories', type: 'Small Pets', price: 24.99, rating: 4.3, overview: 'Silent spinning wheel for your hamster\'s exercise needs.', images: [getPlaceholderImage(200, 150, 'Exercise Wheel', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Exercise Wheel 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Exercise Wheel 3', 'cccccc', '333333')] },
+    { id: 10, name: 'Fish Tank Filter System', category: 'Health & Wellness', type: 'Fish', price: 69.99, rating: 4.6, overview: 'Advanced filtration system for clean aquarium water.', images: [getPlaceholderImage(200, 150, 'Filter System', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Filter System 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Filter System 3', 'cccccc', '333333')] },
+    { id: 11, name: 'Premium Organic Dog Food', category: 'Pet Food', type: 'Dogs', price: 49.99, rating: 4.8, overview: 'High-quality organic dog food for overall health.', images: [getPlaceholderImage(200, 150, 'Dog Food', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Dog Food 4', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Dog Food 5', 'cccccc', '333333')] },
+    { id: 12, name: 'Automatic Pet Feeder', category: 'Pet Food', type: 'Cats', price: 89.99, rating: 4.5, overview: 'Automate your pet\'s feeding schedule with this smart feeder.', images: [getPlaceholderImage(200, 150, 'Pet Feeder', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Pet Feeder 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Pet Feeder 3', 'cccccc', '333333')] },
+    { id: 13, name: 'Pet GPS Tracker', category: 'Health & Wellness', type: 'Dogs', price: 45.99, rating: 4.7, overview: 'Track your pet\'s location with this reliable GPS tracker.', images: [getPlaceholderImage(200, 150, 'GPS Tracker', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'GPS Tracker 3', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'GPS Tracker 4', 'cccccc', '333333')] },
+    { id: 14, name: 'Luxury Pet Bed', category: 'Beds & Furniture', type: 'Dogs', price: 79.99, rating: 4.5, overview: 'A comfortable and stylish bed for your pet to relax.', images: [getPlaceholderImage(200, 150, 'Pet Bed', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Pet Bed 4', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Pet Bed 5', 'cccccc', '333333')] },
+    { id: 15, name: 'Natural Pet Shampoo', category: 'Grooming', type: 'Dogs', price: 18.99, rating: 4.6, overview: 'Gentle and natural shampoo for a clean and shiny coat.', images: [getPlaceholderImage(200, 150, 'Pet Shampoo', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Pet Shampoo 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Pet Shampoo 3', 'cccccc', '333333')] },
+    { id: 16, name: 'Bird Cage Deluxe', category: 'Toys & Accessories', type: 'Birds', price: 129.99, rating: 4.2, overview: 'A spacious and secure cage for your avian friend.', images: [getPlaceholderImage(200, 150, 'Bird Cage', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Bird Cage 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Bird Cage 3', 'cccccc', '333333')] },
+    { id: 17, name: 'Pet Dental Care Kit', category: 'Health & Wellness', type: 'Dogs', price: 34.99, rating: 4.3, overview: 'Maintain your pet\'s oral hygiene with this complete dental kit.', images: [getPlaceholderImage(200, 150, 'Dental Kit', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Dental Kit 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Dental Kit 3', 'cccccc', '333333')] },
+
+
+    // Shop All Products (9 products)
+    { id: 18, name: 'Aquarium Starter Set', category: 'Toys & Accessories', type: 'Fish', price: 89.99, rating: 4.4, overview: 'Everything you need to set up a thriving aquarium.', images: [getPlaceholderImage(200, 150, 'Aquarium', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Aquarium 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Aquarium 3', 'cccccc', '333333')] },
+    { id: 19, name: 'Catnip Variety Pack', category: 'Toys & Accessories', type: 'Cats', price: 15.99, rating: 4.0, overview: 'A fun variety pack of catnip toys for your feline.', images: [getPlaceholderImage(200, 150, 'Catnip', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Catnip 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Catnip 3', 'cccccc', '333333')] },
+    { id: 23, name: 'Wireless Dog Training Collar', category: 'Training', type: 'Dogs', price: 119.99, rating: 4.4, overview: 'Train your dog with humane vibration, sound, and remote control.', images: [getPlaceholderImage(200, 150, 'Training Collar', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Training Collar 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Training Collar 3', 'cccccc', '333333')] },
+    { id: 24, name: 'Self-Cleaning Litter Box', category: 'Litter & Accessories', type: 'Cats', price: 149.99, rating: 4.1, overview: 'Automatically cleans after your cat for a fresher home.', images: [getPlaceholderImage(200, 150, 'Self-Cleaning Box', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Self-Cleaning Box 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Self-Cleaning Box 3', 'cccccc', '333333')] },
+    { id: 25, name: 'Parrot Play Stand', category: 'Toys & Accessories', type: 'Birds', price: 65.99, rating: 4.3, overview: 'Sturdy play stand with perches and toys for parrots.', images: [getPlaceholderImage(200, 150, 'Parrot Stand', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Parrot Stand 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Parrot Stand 3', 'cccccc', '333333')] },
+    { id: 26, name: 'Rabbit Hutch with Run', category: 'Beds & Furniture', type: 'Small Pets', price: 179.99, rating: 4.2, overview: 'Spacious hutch with an outdoor run for rabbits or guinea pigs.', images: [getPlaceholderImage(200, 150, 'Rabbit Hutch', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Rabbit Hutch 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Rabbit Hutch 3', 'cccccc', '333333')] },
+    { id: 27, name: 'Ultra-Quiet Air Pump', category: 'Health & Wellness', type: 'Fish', price: 24.99, rating: 4.7, overview: 'Silent air pump for healthy aquarium oxygenation.', images: [getPlaceholderImage(200, 150, 'Air Pump', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Air Pump 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Air Pump 3', 'cccccc', '333333')] },
+    { id: 28, name: 'Cat Window Perch', category: 'Beds & Furniture', type: 'Cats', price: 39.99, rating: 4.6, overview: 'Let your cat lounge by the window in comfort.', images: [getPlaceholderImage(200, 150, 'Window Perch', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Window Perch 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Window Perch 3', 'cccccc', '333333')] },
+    { id: 29, name: 'Dog Cooling Mat', category: 'Health & Wellness', type: 'Dogs', price: 32.99, rating: 4.5, overview: 'Self-cooling gel mat to keep your dog cool in summer.', images: [getPlaceholderImage(200, 150, 'Cooling Mat', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Cooling Mat 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Cooling Mat 3', 'cccccc', '333333')] },
+    { id: 30, name: 'Small Pet Hideaway', category: 'Beds & Furniture', type: 'Small Pets', price: 22.99, rating: 4.4, overview: 'Cozy hideout for hamsters, gerbils, or mice.', images: [getPlaceholderImage(200, 150, 'Pet Hideaway', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Pet Hideaway 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Pet Hideaway 3', 'cccccc', '333333')] },
+    { id: 31, name: 'Dog Raincoat', category: 'Apparel', type: 'Dogs', price: 29.99, rating: 4.3, overview: 'Waterproof raincoat for walks in any weather.', images: [getPlaceholderImage(200, 150, 'Dog Raincoat', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Dog Raincoat 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Dog Raincoat 3', 'cccccc', '333333')] },
+    { id: 32, name: 'Cat Grass Growing Kit', category: 'Health & Wellness', type: 'Cats', price: 15.99, rating: 4.2, overview: 'Grow fresh cat grass indoors for your feline’s digestion.', images: [getPlaceholderImage(200, 150, 'Cat Grass Kit', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Cat Grass Kit 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Cat Grass Kit 3', 'cccccc', '333333')] },
+    { id: 33, name: 'Bird Bath & Feeder Combo', category: 'Toys & Accessories', type: 'Birds', price: 34.99, rating: 4.1, overview: 'Dual-function bath and feeder for wild and pet birds.', images: [getPlaceholderImage(200, 150, 'Bird Bath Feeder', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Bird Bath Feeder 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Bird Bath Feeder 3', 'cccccc', '333333')] },
+    { id: 34, name: 'Dog Life Jacket', category: 'Safety', type: 'Dogs', price: 44.99, rating: 4.0, overview: 'Buoyant life jacket for safe swimming and boating.', images: [getPlaceholderImage(200, 150, 'Dog Life Jacket', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Dog Life Jacket 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Dog Life Jacket 3', 'cccccc', '333333')] },
+
+    // Additional Products from ProductDetailPage (3 products)
+    { id: 20, name: 'Natural Puppy Food', category: 'Food', type: 'Dogs', price: 21.00, rating: 4.7, overview: 'Nutritious food for growing puppies.', images: [getPlaceholderImage(200, 150, 'Puppy Food', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Puppy Food 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Puppy Food 3', 'cccccc', '333333')] },
+    { id: 21, name: 'Ocean Dry Dog Food', category: 'Food', type: 'Dogs', price: 21.00, rating: 4.6, overview: 'Delicious dry food with ocean-sourced ingredients.', images: [getPlaceholderImage(200, 150, 'Dry Dog Food', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Dry Dog Food 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Dry Dog Food 3', 'cccccc', '333333')] },
+    { id: 22, name: 'Healthy Premium Mix Seeds', category: 'Food', type: 'Birds', price: 21.00, rating: 4.8, overview: 'A blend of premium seeds for healthy birds.', images: [getPlaceholderImage(200, 150, 'Bird Seeds', 'fcd34d', 'ffffff'), getPlaceholderImage(200, 150, 'Bird Seeds 2', 'e0e0e0', '666666'), getPlaceholderImage(200, 150, 'Bird Seeds 3', 'cccccc', '333333')] },
+];
+
+// Get total number of products
+export const getTotalProductCount = () => {
+    return allProducts.length;
+};
+
+// Get products by category
+export const getProductsByCategory = (category) => {
+    return allProducts.filter(product => product.category === category);
+};
+
+// Get products by type
+export const getProductsByType = (type) => {
+    return allProducts.filter(product => product.type === type);
+};
+
+// Get deal of the day products (first 3)
+export const getDealOfTheDayProducts = () => {
+    return allProducts.slice(0,7);
+};
+
+// Get featured products (products 4-10)
+export const getFeaturedProducts = () => {
+    return allProducts.slice(8, 17);
+};
+
+// Get shop all products (products 11-19)
+export const getShopAllProducts = () => {
+    return allProducts.slice(1, 34);
+};
+
+// Get related products (last 3)
+export const getRelatedProducts = () => {
+    return allProducts.slice(-3);
+};

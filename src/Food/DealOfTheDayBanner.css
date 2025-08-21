@@ -1,0 +1,100 @@
+/* Deal Banner Section */
+.deal-banner {
+  background: linear-gradient(90deg, #fb923c 0%, #ef4444 100%);
+  color: #fff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  margin: 2rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .deal-banner {
+    margin: 2rem 2rem;
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .deal-banner {
+    margin: 2rem 4rem;
+    padding: 1.5rem 4rem;
+  }
+}
+
+/* Banner Content Container */
+.deal-banner-content {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .deal-banner-content {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 1.5rem;
+  }
+}
+
+/* Banner Info Section */
+.deal-banner-info {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .deal-banner-info {
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+
+.deal-banner-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .deal-banner-title {
+    font-size: 2.25rem;
+  }
+}
+
+.deal-banner-description {
+  font-size: 1.125rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .deal-banner-description {
+    font-size: 1.25rem;
+  }
+}
+
+/* Banner Button */
+.deal-banner-button {
+  background: #fff;
+  color: #ea580c;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  min-width: 140px;
+  text-align: center;
+}
+
+.deal-banner-button:hover {
+  background: #f3f4f6;
+  transform: scale(1.05);
+}

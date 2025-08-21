@@ -1,0 +1,54 @@
+.download-app-section {
+  background-color: #f5f5f5;
+  padding: 60px 0;
+}
+
+.download-app-section .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.download-content {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.download-content h2 {
+  text-align: left; /* Override global h2 centering */
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  color: #333;
+}
+
+.download-content p {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.app-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.app-buttons img {
+  height: 50px; /* Standardize button image size */
+}
+
+.download-app-image {
+  flex: 0 0 auto;
+  width: 400px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-app-image img {
+  max-width: 100%;
+  height: auto;
+}

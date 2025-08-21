@@ -1,0 +1,359 @@
+/* Blog Comments Styles */
+
+.blog-comments {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #f7fafc;
+}
+
+.blog-comments__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.blog-comments__header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0;
+}
+
+.blog-comments__header svg {
+  color: #667eea;
+}
+
+/* Comment Form */
+.blog-comments__form {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 2px solid #e9ecef;
+}
+
+.blog-comments__textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.blog-comments__textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.blog-comments__submit {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.blog-comments__submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.blog-comments__submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Comments List */
+.blog-comments__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.blog-comments__empty {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #718096;
+}
+
+.blog-comments__empty svg {
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.blog-comments__empty p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Individual Comment */
+.blog-comment {
+  background: white;
+  border: 2px solid #f7fafc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.blog-comment:hover {
+  border-color: #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.blog-comment--reply {
+  margin-left: 2rem;
+  margin-top: 1rem;
+  background: #f8f9fa;
+  border-color: #e9ecef;
+}
+
+.blog-comment__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.blog-comment__author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.blog-comment__avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.blog-comment__avatar--small {
+  width: 32px;
+  height: 32px;
+  font-size: 0.9rem;
+}
+
+.blog-comment__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.blog-comment__name {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.9rem;
+}
+
+.blog-comment__date {
+  font-size: 0.8rem;
+  color: #a0aec0;
+}
+
+.blog-comment__delete {
+  padding: 0.5rem;
+  background: #fed7d7;
+  color: #e53e3e;
+  border: 2px solid #feb2b2;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.blog-comment__delete:hover {
+  background: #fbb6ce;
+  border-color: #f687b3;
+}
+
+.blog-comment__content {
+  margin-bottom: 1rem;
+}
+
+.blog-comment__content p {
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.blog-comment__actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.blog-comment__action {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  background: #f7fafc;
+  color: #718096;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.blog-comment__action:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.blog-comment__action--liked {
+  border-color: #e53e3e;
+  color: #e53e3e;
+  background: #fed7d7;
+}
+
+/* Reply Form */
+.blog-comment__reply-form {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f0f4f8;
+  border-radius: 8px;
+  border: 2px solid #e2e8f0;
+}
+
+.blog-comment__reply-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  resize: vertical;
+  margin-bottom: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.blog-comment__reply-textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.blog-comment__reply-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.blog-comment__replies {
+  margin-top: 1rem;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn--primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.btn--secondary {
+  background: #f7fafc;
+  color: #4a5568;
+  border: 2px solid #e2e8f0;
+}
+
+.btn--secondary:hover {
+  background: #edf2f7;
+  border-color: #cbd5e0;
+}
+
+.btn--small {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.75rem;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-comment--reply {
+    margin-left: 1rem;
+  }
+
+  .blog-comment__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .blog-comment__actions {
+    flex-wrap: wrap;
+  }
+
+  .blog-comment__reply-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-comments__form {
+    padding: 1rem;
+  }
+
+  .blog-comment {
+    padding: 1rem;
+  }
+
+  .blog-comment--reply {
+    margin-left: 0.5rem;
+  }
+
+  .blog-comment__avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
+  .blog-comment__avatar--small {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+}

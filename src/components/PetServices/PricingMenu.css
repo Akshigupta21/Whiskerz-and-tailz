@@ -1,0 +1,217 @@
+/* Pricing Menu Styles */
+.pricing-menu {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.paw-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0;
+}
+
+.pet-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.tab-button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+  color: #666;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button.active {
+  background: #ff6b35;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.tab-button:hover:not(.active) {
+  background: #f8f9fa;
+  transform: translateY(-1px);
+}
+
+.pricing-content {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-sections {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.section-header .icon {
+  font-size: 1.5rem;
+}
+
+.section-header h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.service-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.service-info {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.service-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.service-description {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.service-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c3e50;
+  white-space: nowrap;
+}
+
+.pet-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.pet-image {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.add-ons {
+  min-height: 400px;
+}
+
+.addon-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.addon-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.addon-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.addon-price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pricing-sections {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .pet-image-container {
+    order: -1;
+  }
+  
+  .pet-image {
+    width: 200px;
+    height: 240px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .pet-tabs {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .tab-button {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,70 @@
+/* PetTypeSection.css */
+
+.pet-type-section {
+  /* This section will primarily serve as a wrapper for the HorizontalScrollSection */
+  margin-bottom: 40px; /* Add some spacing below the section */
+}
+
+/* Remove or comment out these lines as the title and view-all are now handled by HorizontalScrollSection */
+/*
+.pet-type-section h4 { ... }
+.pet-type-section .view-all-link { ... }
+*/
+
+/* Styles for individual pet type cards (ensure width and flex-basis) */
+.pet-type-card {
+  flex: 0 0 auto; /* Crucial: Prevents cards from shrinking and forces horizontal layout */
+  width: 100px; /* Adjusted width to match screenshot - experiment with this */
+  /* Other existing styles for border, border-radius, shadow, background, transition */
+  border: 1px solid var(--border-color);
+  border-radius: 8px; /* Smaller radius for a tighter look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  background-color: var(--card-background);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  padding: 10px 5px; /* Reduced padding to make cards smaller */
+  text-align: center;
+}
+
+.pet-type-card:hover {
+  transform: translateY(-5px);
+}
+
+.pet-type-card img {
+  width: 60px; /* Smaller image size to match screenshot */
+  height: 60px;
+  object-fit: cover; /* Use cover if images are varied, contain if they are icons */
+  border-radius: 50%; /* Circular images as in screenshot */
+  margin-bottom: 8px; /* Reduced margin */
+  /* border: 2px solid var(--primary-color); */ /* Optional: if you want a border around the image */
+}
+
+.pet-type-card h3 {
+  font-size: 0.9rem; /* Smaller font size for pet names */
+  color: var(--text-color-primary);
+  margin: 0;
+  white-space: nowrap; /* Prevent name from wrapping, might cause overflow if name is too long */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis for overflow */
+  max-width: 100%; /* Ensure text doesn't push card wider */
+}
+
+/* The .card-grid within the HorizontalScrollSection will be a flex container */
+.card-grid {
+  display: flex; /* Ensures cards align horizontally */
+  /* Remove any grid-specific properties that would prevent flex behavior */
+}
+
+/* Dark mode adjustments (if you have them) */
+.dark-mode .pet-type-card {
+    background-color: var(--dark-card-background);
+    border-color: var(--dark-border-color);
+}
+.dark-mode .pet-type-card h3 {
+    color: var(--dark-text-color-primary);
+}
+.dark-mode .pet-type-card img {
+    border-color: var(--dark-primary-color);
+}

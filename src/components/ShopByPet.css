@@ -1,0 +1,549 @@
+/* ====================================
+   COMMON SHOP BY PET SECTION STYLES
+====================================== */
+
+.shopbypet-section {
+  background: linear-gradient(135deg, #ffffff 0%, #fefbf7 50%, #fef7ed 100%);
+  padding: 4rem 1rem;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 1400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Background decorative elements */
+.shopbypet-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(249, 115, 22, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(234, 88, 12, 0.03) 0%, transparent 50%);
+  z-index: 0;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .shopbypet-section {
+    padding: 5rem 2rem;
+    margin: 3rem auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .shopbypet-section {
+    padding: 6rem 3rem;
+  }
+}
+
+/* ====================================
+   HEADER STYLES
+====================================== */
+
+.shopbypet-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease 0.2s forwards;
+}
+
+.shopbypet-title-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.shopbypet-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, #1f2937 0%, #374151 50%, #f97316 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 1rem 0;
+  position: relative;
+}
+
+.shopbypet-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #f97316, #ea580c);
+  border-radius: 2px;
+}
+
+.shopbypet-subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ====================================
+   GRID LAYOUT STYLES
+====================================== */
+
+.shopbypet-grid.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 1;
+  justify-items: center;
+  align-items: stretch;
+}
+
+@media (min-width: 480px) {
+  .shopbypet-grid.grid-layout {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .shopbypet-grid.grid-layout {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .shopbypet-grid.grid-layout {
+    gap: 2.5rem;
+  }
+}
+
+/* Grid Style Cards */
+.shopbypet-card.grid-style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(249, 115, 22, 0.1);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  min-height: 140px;
+  width: 100%;
+  max-width: 160px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.shopbypet-card.grid-style .shopbypet-icon {
+  background: linear-gradient(135deg, #fef3e2 0%, #fed7aa 100%);
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.15);
+  position: relative;
+}
+
+.shopbypet-card.grid-style .shopbypet-content {
+  text-align: center;
+}
+
+.shopbypet-card.grid-style .shopbypet-arrow {
+  display: none;
+}
+
+/* ====================================
+   CARDS LAYOUT STYLES
+====================================== */
+
+.shopbypet-grid.cards-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 1;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .shopbypet-grid.cards-layout {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .shopbypet-grid.cards-layout {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* Card Style Cards */
+.shopbypet-card.card-style {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(249, 115, 22, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.shopbypet-card.card-style .shopbypet-icon {
+  background: linear-gradient(135deg, #fef3e2 0%, #fed7aa 100%);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.15);
+}
+
+.shopbypet-card.card-style .shopbypet-content {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.shopbypet-card.card-style .shopbypet-arrow {
+  color: #9ca3af;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* ====================================
+   COMMON CARD INTERACTIONS
+====================================== */
+
+.shopbypet-card:nth-child(1) { animation-delay: 0.3s; }
+.shopbypet-card:nth-child(2) { animation-delay: 0.4s; }
+.shopbypet-card:nth-child(3) { animation-delay: 0.5s; }
+.shopbypet-card:nth-child(4) { animation-delay: 0.6s; }
+.shopbypet-card:nth-child(5) { animation-delay: 0.7s; }
+.shopbypet-card:nth-child(6) { animation-delay: 0.8s; }
+
+.shopbypet-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(249, 115, 22, 0.03) 50%, transparent 100%);
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.shopbypet-card:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: var(--category-color, #f97316);
+  box-shadow: 
+    0 12px 28px rgba(0, 0, 0, 0.12),
+    0 0 0 1px var(--category-color, rgba(249, 115, 22, 0.1));
+  transform: translateY(-8px);
+}
+
+.shopbypet-card.grid-style:hover {
+  transform: translateY(-8px) scale(1.05);
+}
+
+.shopbypet-card:hover::before {
+  opacity: 1;
+}
+
+.shopbypet-card:hover .shopbypet-icon {
+  background: var(--category-color, #f97316);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.3);
+  color: white;
+}
+
+.shopbypet-card.grid-style:hover .shopbypet-icon {
+  background: linear-gradient(135deg, var(--category-color, #f97316), var(--category-color, #ea580c));
+}
+
+.shopbypet-card:hover .shopbypet-name {
+  color: var(--category-color, #f97316);
+}
+
+.shopbypet-card.card-style:hover .shopbypet-arrow {
+  color: var(--category-color, #f97316);
+  transform: translateX(4px);
+}
+
+/* ====================================
+   CONTENT STYLES
+====================================== */
+
+.shopbypet-name {
+  color: #1f2937;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+.shopbypet-card.grid-style .shopbypet-name {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.shopbypet-description {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.4;
+}
+
+.shopbypet-card.grid-style .shopbypet-description {
+  display: none;
+}
+
+.shopbypet-count {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--category-color, #f97316);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ====================================
+   FOOTER STYLES
+====================================== */
+
+.shopbypet-footer {
+  text-align: center;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.shopbypet-view-all {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.25);
+}
+
+.shopbypet-view-all:hover {
+  background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ====================================
+   ANIMATIONS
+====================================== */
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====================================
+   RESPONSIVE ADJUSTMENTS
+====================================== */
+
+@media (max-width: 640px) {
+  .shopbypet-section {
+    padding: 3rem 1rem;
+    margin: 1rem auto;
+    border-radius: 16px;
+  }
+  
+  .shopbypet-grid {
+    gap: 1.5rem;
+  }
+  
+  .shopbypet-grid.grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .shopbypet-grid.cards-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .shopbypet-card {
+    padding: 1.5rem;
+  }
+  
+  .shopbypet-card.card-style {
+    gap: 1rem;
+  }
+  
+  .shopbypet-card.grid-style .shopbypet-icon {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+  
+  .shopbypet-card.card-style .shopbypet-icon {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+  
+  .shopbypet-name {
+    font-size: 1.125rem;
+  }
+}
+
+/* ====================================
+   THEME VARIATIONS
+====================================== */
+
+/* Food Theme */
+.shopbypet-section.food-theme {
+  background: linear-gradient(135deg, #fef7ed 0%, #fff7ed 50%, #fef3e2 100%);
+}
+
+.shopbypet-section.food-theme .shopbypet-title {
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 50%, #fb923c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Product Theme */
+.shopbypet-section.product-theme {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%);
+}
+
+.shopbypet-section.product-theme .shopbypet-title {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Home Theme */
+.shopbypet-section.home-theme {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+}
+
+.shopbypet-section.home-theme .shopbypet-title {
+  background: linear-gradient(135deg, #166534 0%, #16a34a 50%, #22c55e 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ====================================
+   DARK MODE SUPPORT
+====================================== */
+
+.dark-mode .shopbypet-section {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 50%, #0f172a 100%);
+}
+
+.dark-mode .shopbypet-card {
+  background: rgba(31, 41, 55, 0.95);
+  border-color: rgba(75, 85, 99, 0.3);
+}
+
+.dark-mode .shopbypet-card:hover {
+  background: rgba(31, 41, 55, 1);
+  border-color: var(--category-color, #f97316);
+}
+
+.dark-mode .shopbypet-name {
+  color: #f9fafb;
+}
+
+.dark-mode .shopbypet-description {
+  color: #d1d5db;
+}
+
+.dark-mode .shopbypet-subtitle {
+  color: #9ca3af;
+}
+
+/* ====================================
+   ACCESSIBILITY
+====================================== */
+
+/* Focus styles for better accessibility */
+.shopbypet-card:focus,
+.shopbypet-view-all:focus {
+  outline: 3px solid rgba(249, 115, 22, 0.5);
+  outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .shopbypet-card,
+  .shopbypet-header {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  
+  .shopbypet-card:hover,
+  .shopbypet-icon {
+    transform: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .shopbypet-title {
+    color: #000;
+    -webkit-text-fill-color: #000;
+  }
+  
+  .shopbypet-card {
+    border: 2px solid #000;
+  }
+  
+  .shopbypet-view-all {
+    background: #000;
+    border: 2px solid #fff;
+  }
+}

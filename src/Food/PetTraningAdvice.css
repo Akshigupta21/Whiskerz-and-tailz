@@ -1,0 +1,127 @@
+.training-section {
+  background: #ffffff;
+  padding: 3rem 1rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .training-section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .training-section {
+    padding: 3rem 4rem;
+  }
+}
+
+.training-card {
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 48rem;
+  padding: 2rem;
+}
+
+.training-heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+  margin: 0 0 0.75rem;
+}
+
+.emoji {
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+.training-subtitle {
+  color: #4b5563;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.training-form-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.training-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.training-textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  min-height: 6rem;
+}
+
+.training-textarea:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+}
+
+.training-button {
+  background: #f97316;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  padding: 0.9rem 2rem;
+  width: 100%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.training-button:hover:not(:disabled) {
+  background: #ea580c;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.training-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.training-button.loading {
+  opacity: 0.7;
+}
+
+/* Answer Section */
+
+.training-answer {
+  background: #ffedd5;
+  border: 1px solid #fdba74;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+}
+
+.answer-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 0.75rem;
+}
+
+.answer-content {
+  color: #374151;
+  line-height: 1.8;
+  font-size: 1rem;
+  white-space: pre-wrap;
+}

@@ -1,0 +1,103 @@
+/* Variables for consistency & theming */
+:root {
+  --color-primary: #f97316;
+  --color-white: #ffffff;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-shadow-light: rgba(0, 0, 0, 0.05);
+  --color-shadow-medium: rgba(0, 0, 0, 0.1);
+  --border-radius-sm: 0.5rem;
+  --border-radius-md: 0.75rem;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
+  --card-width: 16rem;
+  --gap-default: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --transition-base: all 0.3s ease;
+}
+
+/* Main Section */
+.featured-products {
+  background-color: var(--color-gray-50);
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.featured-products__container {
+  max-width: 84rem;
+  margin: 0 auto;
+}
+
+/* Header */
+.featured-products__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+@media (min-width: 640px) {
+  .featured-products__header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.featured-products__title {
+  color: var(--color-gray-800);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin: 0;
+}
+
+.featured-products__link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-primary);
+  font-size: var(--font-size-base);
+  text-decoration: none;
+  margin-top: var(--spacing-xs);
+}
+
+@media (min-width: 640px) {
+  .featured-products__link {
+    margin-top: 0;
+  }
+}
+
+.featured-products__link:hover {
+  text-decoration: underline;
+}
+
+.featured-products__link-icon {
+  margin-left: var(--spacing-xs);
+}
+
+/* Product Grid */
+.featured-products__grid {
+  display: flex;
+  overflow-x: auto;
+  gap: var(--gap-default);
+  padding-bottom: var(--spacing-sm);
+}
+
+.featured-products__grid::-webkit-scrollbar {
+  display: none;
+}
+
+.featured-products__item {
+  flex-shrink: 0;
+  width: var(--card-width);
+}

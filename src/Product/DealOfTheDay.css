@@ -1,0 +1,117 @@
+:root {
+  --color-primary: #f97316;
+  --color-primary-hover: #ea580c;
+  --color-white: #ffffff;
+  --color-gray-100: #f3f4f6;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --gap-default: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --border-radius-sm: 0.375rem;
+  --border-radius-md: 0.75rem;
+  --transition-base: all 0.3s ease;
+}
+
+.deal-of-the-day {
+  padding: var(--spacing-lg) var(--spacing-md);
+  background-color: var(--color-white);
+}
+
+.deal-of-the-day__container {
+  max-width: 84rem;
+  margin: 0 auto;
+}
+
+.deal-of-the-day__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .deal-of-the-day__header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.deal-of-the-day__title {
+  font-size: var(--font-size-xl);
+  color: var(--color-gray-800);
+  margin: 0;
+}
+
+.deal-of-the-day__timer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--color-gray-600);
+  margin: var(--spacing-xs) 0 0;
+}
+
+@media (min-width: 768px) {
+  .deal-of-the-day__timer {
+    margin: 0;
+  }
+}
+
+.deal-of-the-day__timer-label {
+  font-size: var(--font-size-sm);
+}
+
+.deal-of-the-day__timer-digits {
+  display: absolute;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.deal-of-the-day__timer-digit {
+  display: absolute;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0 var(--spacing-xs);
+  border-radius: var(--border-radius-sm);
+  font-weight: bold;
+  font-size: var(--font-size-sm);
+}
+
+.deal-of-the-day__timer-separator {
+  font-weight: bold;
+  font-size: var(--font-size-lg);
+}
+
+.deal-of-the-day__products {
+  display: flex;
+  overflow-x: auto;
+  gap: var(--gap-default);
+  padding-bottom: var(--spacing-sm);
+  scrollbar-width: none;
+}
+
+.deal-of-the-day__products::-webkit-scrollbar {
+  display: none;
+}
+
+.deal-of-the-day__product {
+  flex-shrink: 0;
+  width: 16rem;
+}
+.deal-of-the-day__product-image {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: var(--border-radius-md);
+}

@@ -1,0 +1,513 @@
+/* ====================================
+   MODERN FOOD SECTION - ENHANCED STYLES
+====================================== */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* ====================================
+   GLOBAL & BASE STYLES
+====================================== */
+.food-app {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #1f2937;
+  background: linear-gradient(135deg, #fef7ed 0%, #fff7ed 50%, #fef3e2 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Enhanced background pattern */
+.food-app::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(249, 115, 22, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(234, 88, 12, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.food-main-content {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+@media (min-width: 768px) {
+  .food-main-content {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .food-main-content {
+    padding: 0 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .food-main-content {
+    padding: 0 4rem;
+  }
+}
+
+/* Enhanced section spacing with smooth transitions */
+.food-main-content > * {
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.food-main-content > *:nth-child(1) { animation-delay: 0.1s; }
+.food-main-content > *:nth-child(2) { animation-delay: 0.2s; }
+.food-main-content > *:nth-child(3) { animation-delay: 0.3s; }
+.food-main-content > *:nth-child(4) { animation-delay: 0.4s; }
+.food-main-content > *:nth-child(5) { animation-delay: 0.5s; }
+
+/* ====================================
+   ENHANCED ANIMATIONS
+====================================== */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+/* ====================================
+   ENHANCED COMPONENT STYLES
+====================================== */
+
+/* Modern card styling */
+.food-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+.food-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(249, 115, 22, 0.1),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.food-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: rgba(249, 115, 22, 0.3);
+}
+
+.food-card:hover::before {
+  left: 100%;
+}
+
+/* Enhanced section headers */
+.food-section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.food-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 50%, #dc2626 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.food-section-subtitle {
+  font-size: 1.2rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Decorative elements */
+.food-section-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #f97316, #ea580c);
+  border-radius: 2px;
+}
+
+/* ====================================
+   ENHANCED BUTTON STYLES
+====================================== */
+.food-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  outline: none;
+}
+
+.food-btn-primary {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: white;
+  box-shadow: 0 4px 14px 0 rgba(249, 115, 22, 0.35);
+}
+
+.food-btn-primary:hover {
+  background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px 0 rgba(249, 115, 22, 0.45);
+}
+
+.food-btn-secondary {
+  background: rgba(249, 115, 22, 0.1);
+  color: #f97316;
+  border: 2px solid rgba(249, 115, 22, 0.2);
+}
+
+.food-btn-secondary:hover {
+  background: rgba(249, 115, 22, 0.2);
+  border-color: #f97316;
+  transform: translateY(-2px);
+}
+
+.food-btn-ghost {
+  background: transparent;
+  color: #374151;
+  border: 2px solid #e5e7eb;
+}
+
+.food-btn-ghost:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  color: #111827;
+}
+
+/* Button loading state */
+.food-btn-loading {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.food-btn-loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ====================================
+   ENHANCED GRID LAYOUTS
+====================================== */
+.food-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  justify-items: center;
+}
+
+.food-grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  max-width: 800px;
+}
+
+.food-grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1200px;
+}
+
+.food-grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 1400px;
+}
+
+@media (min-width: 1280px) {
+  .food-grid {
+    gap: 2.5rem;
+  }
+}
+
+/* ====================================
+   ENHANCED UTILITY CLASSES
+====================================== */
+
+/* Focus states for accessibility */
+button:focus,
+input:focus,
+a:focus {
+  outline: 3px solid rgba(249, 115, 22, 0.5);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* Enhanced animations for interactive elements */
+.food-interactive {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.food-interactive:hover {
+  transform: translateY(-4px);
+}
+
+.food-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.food-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Glass morphism effect */
+.food-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Gradient text */
+.food-gradient-text {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 50%, #dc2626 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Enhanced loading skeleton */
+.food-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* ====================================
+   RESPONSIVE ENHANCEMENTS
+====================================== */
+@media (max-width: 639px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  .mobile-full-width {
+    width: 100%;
+  }
+
+  .food-main-content {
+    padding: 0 0.5rem;
+  }
+
+  .food-main-content > * {
+    margin-bottom: 2rem;
+  }
+
+  .food-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .food-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .desktop-hidden {
+    display: none !important;
+  }
+  
+  .food-main-content {
+    padding: 0 1rem;
+  }
+  
+  .food-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .food-main-content {
+    padding: 0 1.5rem;
+  }
+  
+  .food-grid {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .food-main-content {
+    padding: 0 2rem;
+  }
+  
+  .food-main-content > * {
+    margin-bottom: 4rem;
+  }
+  
+  .food-grid {
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .food-main-content {
+    padding: 0 3rem;
+  }
+  
+  .food-grid {
+    gap: 3rem;
+  }
+}
+
+/* ====================================
+   DARK MODE ENHANCEMENTS
+====================================== */
+.dark-mode .food-app {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 50%, #0f172a 100%);
+  color: #f9fafb;
+}
+
+.dark-mode .food-card {
+  background: rgba(31, 41, 55, 0.95);
+  border-color: rgba(75, 85, 99, 0.3);
+}
+
+.dark-mode .food-card:hover {
+  border-color: rgba(249, 115, 22, 0.5);
+}
+
+.dark-mode .food-section-subtitle {
+  color: #9ca3af;
+}
+
+.dark-mode .food-btn-ghost {
+  color: #f9fafb;
+  border-color: rgba(75, 85, 99, 0.5);
+}
+
+.dark-mode .food-btn-ghost:hover {
+  background: rgba(75, 85, 99, 0.2);
+  border-color: rgba(156, 163, 175, 0.5);
+}
+
+/* ====================================
+   PERFORMANCE OPTIMIZATIONS
+====================================== */
+.food-app {
+  will-change: transform;
+}
+
+.food-card {
+  will-change: transform, box-shadow;
+}
+
+.food-btn {
+  will-change: transform, background-color;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

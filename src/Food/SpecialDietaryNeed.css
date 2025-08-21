@@ -1,0 +1,124 @@
+/* ====================================
+   SECTION LAYOUT
+====================================== */
+
+.dietary-needs-section {
+  background: #fff;
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .dietary-needs-section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dietary-needs-section {
+    padding: 3rem 4rem;
+  }
+}
+
+.dietary-needs-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+  text-align: center;
+}
+
+/* ====================================
+   DIETARY NEEDS GRID
+====================================== */
+
+.dietary-needs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
+  .dietary-needs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .dietary-needs-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ====================================
+   DIETARY NEED CARD
+====================================== */
+
+.dietary-need-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.dietary-need-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+}
+
+.dietary-need-icon {
+  background: #f3f4f6;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 2rem;
+  transition: background 0.15s ease;
+}
+
+.dietary-need-card:hover .dietary-need-icon {
+  background: #e5e7eb;
+}
+
+.dietary-need-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 1rem 0 0.5rem;
+}
+
+.dietary-need-description {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0.5rem 0 1rem;
+}
+
+/* ====================================
+   BUTTON
+====================================== */
+
+.dietary-need-button {
+  background: #fff;
+  color: #f97316;
+  border: 1px solid #f97316;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.dietary-need-button:hover {
+  background: #f9731630;
+  color: #ea580c;
+}
